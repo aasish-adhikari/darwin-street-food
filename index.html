@@ -1,54 +1,56 @@
 <!doctype html>
 <html lang="">
 
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="x-ua-compatible" content="ie=edge">
-		<title></title>
-		<meta name="description" content="">
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title></title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="theme-color" content="#D66228">
 
-		<link rel="apple-touch-icon" href="icon.png">
-		<link rel="stylesheet" href="style.css">
-	</head>
+	<link rel="apple-touch-icon" href="icon.png">
+	<link rel="stylesheet" href="style.css">
+	<link rel="manifest" href="manifest.json">
+</head>
 
-	<body>
-		<header>
-			<div class="logo-container"><img src="images/logo-60x50.png" alt="Darwin street food logo" class="logo" /></div>
-			<h1>Darwin Street Food</h1>
-		</header>
-		<main>
-		</main>
-		<script src="start.js"></script>
-		<script type="text/pug" id="dayTemplate">
-<section class="daySection">
-	<div class="dayHeader">
-		<h2><%= day %></h2>
-	</div>
-	<% for(var i = 0; i < vendors.length; i++) { %>
-		<article class="vendor">
-			<h3><%=vendors[i].name%></h3>
-			<div class="vendor__details">
-				<div class="vendor__times">
-					<div class="vendor__start">
-						<span class="vendor__details__label">Start</span>
-						<span class="vendor__details__value"><%=vendors[i].openDay.start %></span>
-					</div>
-					<div class="vendor__end">
-						<span class="vendor__details__label">End</span>
-						<span class="vendor__details__value"><%=vendors[i].openDay.end%></span>
-					</div>
-				</div>
-				<div class="vendor__location">
-					<span class="vendor__details__label">Location</span>
-					<span class="vendor__details__value"><%=vendors[i].openLocation.name %></span>
-				</div>
+<body>
+	<header>
+		<div class="logo-container"><img src="images/logo-60x50.png" alt="Darwin street food logo" class="logo" /></div>
+		<h1>Darwin Street Food</h1>
+	</header>
+	<main>
+	</main>
+	<script src="start.js"></script>
+	<script type="text/pug" id="dayTemplate">
+		<section class="daySection">
+			<div class="dayHeader">
+				<h2><%= day %></h2>
 			</div>
-		</article>
-	<% } %>
-</section>
+			<% for(var i = 0; i < vendors.length; i++) { %>
+				<article class="vendor">
+					<h3><%=vendors[i].name%></h3>
+					<div class="vendor__details">
+						<div class="vendor__times">
+							<div class="vendor__start">
+								<span class="vendor__details__label">Start</span>
+								<span class="vendor__details__value"><%=vendors[i].openDay.start %></span>
+							</div>
+							<div class="vendor__end">
+								<span class="vendor__details__label">End</span>
+								<span class="vendor__details__value"><%=vendors[i].openDay.end%></span>
+							</div>
+						</div>
+						<div class="vendor__location">
+							<span class="vendor__details__label">Location</span>
+							<span class="vendor__details__value"><%=vendors[i].openLocation.name %></span>
+						</div>
+					</div>
+				</article>
+				<% } %>
+		</section>
 
-		</script>
-	</body>
+	</script>
+</body>
 
 </html>
